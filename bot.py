@@ -22,19 +22,19 @@ for filename in os.listdir("./Cogs"):
 @commands.is_owner()
 async def load(ctx, extension):
     bot.load_extension(f"cogs.{extension}")
-    await ctx.send(f"✅ 加載 {extension} 成功")
+    await ctx.send(f"✅ load {extension} success!")
 
 @bot.command()
 @commands.is_owner()
 async def unload(ctx, extension):
     bot.unload_extension(f"cogs.{extension}")
-    await ctx.send(f"🗑️ 卸載 {extension} 成功")
+    await ctx.send(f"🗑️ unload {extension} success!")
 
 @bot.command()
 @commands.is_owner()
 async def reload(ctx, extension):
     bot.reload_extension(f"cogs.{extension}")
-    await ctx.send(f"🔄 重載 {extension} 成功")
+    await ctx.send(f"🔄 reload {extension} success!")
 
 if __name__=="__main__":
     bot.run(os.getenv("TOKEN"))

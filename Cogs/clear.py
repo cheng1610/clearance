@@ -107,7 +107,7 @@ class ClearCog(commands.Cog):
             description='target channel',
             channel_types=[discord.ChannelType.text, discord.ChannelType.voice]
         ),  # type: ignore
-        time: discord.Option(int, "每隔幾秒刪除訊息（最少 5 秒）"),  # type: ignore
+        time: discord.Option(int)  # type: ignore
     ):
         await ctx.defer(ephemeral=True)
 
